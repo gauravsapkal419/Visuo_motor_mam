@@ -51,11 +51,10 @@ The model extends the multi-area spiking model of macaque visual cortex ([Schmid
 
 Each node represents a **finite population of similar neurons** (e.g. layer-4 excitatory cells in one area). Instead of simulating every neuron, a node evolves the population activity, the number of spikes of the population in each time step, as a stochastic process. The activity in a step is drawn from the firing probability of the population, given its own spike history (refractoriness) and its synaptic input. Because the number of neurons \(N\) is finite, the activity fluctuates around its mean, and these fluctuations are part of the dynamics. The underlying neurons are generalized integrate-and-fire neurons with the escape rate
 
-\[
-h(t) = \rho_0 \exp\!\left(\frac{V(t) - V_T^{*}}{\Delta V}\right),
-\]
+$$h(t) = \rho_0 \exp\!\left(\frac{V(t) - V_T^{*}}{\Delta V}\right),$$
 
-where \(\rho_0\) is the rate at threshold and \(\Delta V\) the softness of the threshold. The population equations follow Schwalger, Deger & Gerstner (2017) and are implemented in NEST as `gif_pop_psc_exp`.
+
+where $(\rho_0)$ is the rate at threshold and $(\Delta V)$ the softness of the threshold. The population equations follow Schwalger, Deger & Gerstner (2017) and are implemented in NEST as `gif_pop_psc_exp`.
 
 ---
 
