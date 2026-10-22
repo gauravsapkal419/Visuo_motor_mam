@@ -1,0 +1,7 @@
+{
+  "J_ex": 0.15,
+  "fac_nu_ext_5E": 1.0,
+  "fac_nu_ext_6E": 1.0,
+  "rate_ext": 10.0,
+  "tau_mem": 10.0
+}
