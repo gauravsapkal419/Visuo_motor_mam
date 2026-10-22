@@ -1,4 +1,4 @@
-# From Vision to Action: A Mesoscopic Network Model of the Macaque Visuo-Motor System
+# Mesoscopic Multi-Area-Model of the Macaque Visuo-Motor System
 
 [![Python](https://img.shields.io/badge/python-3.11-blue.svg)](https://www.python.org)
 [![NEST](https://img.shields.io/badge/NEST-3.x-orange.svg)](https://www.nest-simulator.org/)
@@ -103,7 +103,8 @@ VM_MAM_models/
 
 ## Installation
 
-1. Install [NEST 3.x](https://nest-simulator.readthedocs.io/en/stable/installation/index.html) with Python bindings. NEST must be installed separately; it is not available through `pip`.
+1. Install [NEST 3.x](https://nest-simulator.readthedocs.io/en/stable/installation/index.html) with Python bindings. NEST must be installed separately
+
 2. Clone the repository and install the Python packages:
 
    ```bash
@@ -214,7 +215,7 @@ The results of a population are `rate_from_spikes` (from the spike recorder), `r
 | Activity of the whole network | `plot_activity_heatmap` |
 | Burstiness | `burstiness`, `plot_burstiness` |
 | Power spectra and beta power | `plot_power_spectrum`, `plot_beta_power` |
-| Fixed points of the rate equations | `fixed_points` |
+
 
 Connectivity plots (binary symmetric connectivity, FLN, SLN, connection probability) are in `visuomotor_data/Visuomotor_Diagnostics.py`.
 
@@ -283,6 +284,5 @@ If you use this code, please cite the thesis and the papers it builds on:
 ## Acknowledgements and contact
 
 This work was carried out in collaboration with Forschungszentrum Jülich.
-<!-- TODO: add supervisors, funding, and the license -->
 
-Questions about the code or the science: please open an issue on GitHub or contact Gaurav Sapkal (<!-- TODO: e-mail -->).
+Questions about the code or the science: please open an issue on GitHub or contact Gaurav Sapkal (gauravsapkal419@gmail.com).
