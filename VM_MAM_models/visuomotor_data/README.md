@@ -61,7 +61,7 @@ Every step reads the output of the step before it. The scripts write their files
 | `figures/` | Figures written by the diagnostics (created when needed) |
 | `*.json` | Generated files (see [Output files](#output-files)) |
 
-The data processing was first developed in the notebook `visuomotor_mam_data_processing.ipynb` and the model computation in `visuomotor_model.ipynb`. The scripts contain the same steps.
+
 
 ---
 
