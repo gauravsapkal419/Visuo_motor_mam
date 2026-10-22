@@ -37,7 +37,7 @@ This repository accompanies the Master's thesis *"From Vision to Action: A Mesos
 
 > How does anatomically constrained connectivity within the visuo-motor system shape its emergent resting-state dynamics?
 
-The model extends the multi-area spiking model of macaque visual cortex (Schmidt et al., 2018) with seven motor and premotor areas (F1–F7). It asks whether realistic spontaneous activity and oscillations can emerge from shared microcircuit principles, **without area-specific tuning**.
+The model extends the multi-area spiking model of macaque visual cortex ([Schmidt et al., 2018](https://doi.org/10.1371/journal.pcbi.1006359)) with seven motor and premotor areas (F1–F7). It asks whether realistic spontaneous activity and oscillations can emerge from shared microcircuit principles, **without area-specific tuning**.
 
 ---
 
