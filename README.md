@@ -49,16 +49,18 @@ The model extends the multi-area spiking model of macaque visual cortex ([Schmid
 | Macroscopic (rate / neural-mass) | Fast, large-scale | Spike history and finite-size fluctuations are lost or added ad hoc |
 | **Mesoscopic (this work)** | Keeps refractoriness, spike-history dependence, finite-size noise and delayed E–I interactions | Output is population activity, not single-neuron spikes |
 
-Each node represents a **finite population of similar neurons** (e.g. layer-4 excitatory cells in one area). Instead of simulating every neuron, a node evolves the population activity, the number of spikes of the population in each time step, as a stochastic process. The activity in a step is drawn from the firing probability of the population, given its own spike history (refractoriness) and its synaptic input. Because the number of neurons \(N\) is finite, the activity fluctuates around its mean, and these fluctuations are part of the dynamics. The underlying neurons are generalized integrate-and-fire neurons with the escape rate
+Each node represents a **finite population of similar neurons**. Instead of simulating every neuron, a node evolves the population activity, the number of spikes of the population in each time step, as a stochastic process. The activity in a step is drawn from the firing probability of the population, given its own spike history (refractoriness) and its synaptic input. Because the number of neurons \(N\) is finite, the activity fluctuates around its mean, and these fluctuations are part of the dynamics. The underlying neurons are generalized integrate-and-fire neurons with the escape rate
 
-$$h(t) = \rho_0 \exp\!\left(\frac{V(t) - V_T^{*}}{\Delta V}\right),$$
+$$h(t) = \rho_0 \exp\ \left(\frac{V(t) - V_T^{*}}{\Delta V}\right),$$
 
 
-where $(\rho_0)$ is the rate at threshold and $(\Delta V)$ the softness of the threshold. The population equations follow Schwalger, Deger & Gerstner (2017) and are implemented in NEST as `gif_pop_psc_exp`.
+where $(\rho_0)$ is the rate at threshold and $(\Delta V)$ the softness of the threshold. The population equations follow [Schwalger, Deger & Gerstner (2017)](https://doi.org/10.1371/journal.pcbi.1005507) and are implemented in [NEST](http://www.scholarpedia.org/article/NEST_(NEural_Simulation_Tool)) as `gif_pop_psc_exp`.
 
 ---
 
 ## The model in brief
+
+![Model overview](model_construction.png)
 
 - **43 areas**: 36 visual, parietal and temporal areas, plus the motor and premotor areas F1–F7.
 - **8 populations per area**: 23E, 23I, 4E, 4I, 5E, 5I, 6E, 6I, so **344 populations** and 344 NEST nodes.
