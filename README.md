@@ -64,11 +64,11 @@ where $(\rho_0)$ is the rate at threshold and $(\Delta V)$ the softness of the t
 
 - **43 areas**: 36 visual, parietal and temporal areas, plus the motor and premotor areas F1–F7.
 - **8 populations per area**: 23E, 23I, 4E, 4I, 5E, 5I, 6E, 6I, so **344 populations** and 344 NEST nodes.
-- **Population sizes** are the neuron numbers of a 1 mm² patch of each area. Areas without layer 4 (TH-TF) have empty 4E and 4I populations.
+- **Population sizes** are the neuron numbers of a 1 mm² patch of each area.
 - **Connectivity** is one connection per pair of populations (344 × 344). Its weight is the synaptic weight times the connection probability (mean-field connectivity), because a `gif_pop_psc_exp` node receives the summed spikes of the whole source population. Cortico-cortical weights can be scaled with `cc_weights_factor`. The weight from 4E to 23E inside an area is doubled, as in the multi-area model.
 - **Delays**: 1.5 ms (from E) and 0.75 ms (from I) inside an area. Between areas the delay is the distance divided by a conduction speed (3.5 mm/ms by default).
-- **External input**: each population receives a constant current whose mean follows from its external indegree, the synaptic strength and the rate of the external input.
-- **Inhibition** is set by the relative inhibitory weight `g`.
+- **External input**: each population receives a constant current whose mean follows from its external indegree, the synaptic strength and the rate of the external input equal to 10 Hz.
+
 
 ---
 
@@ -76,29 +76,28 @@ where $(\rho_0)$ is the rate at threshold and $(\Delta V)$ the softness of the t
 
 ```
 VM_MAM_models/
-├── visuomotor_data/                    anatomical data and its processing
+├── visuomotor_data/                    Importing anatomical data and its processing
 │   ├── Visuomotor_Data.py              raw data -> visuomotor_raw_data.json
 │   ├── Visuomotor_Data_Processing.py   -> visuomotor_processed_data.json
 │   ├── Visuomotor_Model.py             -> model parameters and connectivity
 │   ├── Visuomotor_Diagnostics.py       diagnostics and connectivity plots
 │   └── raw_data/                       raw input files
-└── Mesoscopic_visuomotor_mam/          the mesoscopic model
+└── Mesoscopic_visuomotor_mam/          the mesoscopic visuo-motor model
     ├── mesoscopic_vm_interface.ipynb   notebook: build, simulate, analyse
     ├── config.py                       paths
     ├── default_params.py               all default parameters
     ├── prepare_data.py                 creates missing data files
-    ├── external_input.py               mean external input (mu)
+    ├── external_input.py               Calculated mean external input (mu) for every population
     ├── mesoscopic_model.py             model class
     ├── simulation.py                   NEST network and simulation
     ├── analysis.py                     analysis class
     ├── analysis_helpers.py             bursts, band power, logs
     ├── plotting.py                     plots
-    ├── theory.py                       fixed points of the rate equations
+    ├── theory.py                       fixed points of the rate equations (Not used)
     ├── run_simulation.py               command-line runner
     └── simulations/                    one folder per simulation (created)
 ```
 
-Adapt this tree if your folder names differ.
 
 ---
 
