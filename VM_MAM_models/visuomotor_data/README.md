@@ -123,7 +123,7 @@ Fills the gaps of the experimental data and derives the quantities the model nee
 
 **Neuronal densities and thickness**
 
-1. Linear fit between the neuron densities of the visual multi-area model and of Beul et al. to put both on one scale.
+1. Linear fit between the neuron densities of the areas common in visual multi-area model and of Beul et al. to put both on one scale.
 2. Densities for areas without data: average density of the cortical category (architectural type) for each layer and overall.
 3. Linear fit of density against total cortical thickness for missing thickness values.
 4. Laminar thicknesses: relative thicknesses from the available areas, regression for layer 4 from the overall density, then conversion to absolute values.
